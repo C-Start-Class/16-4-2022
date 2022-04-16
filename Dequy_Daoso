@@ -1,0 +1,21 @@
+#include <stdio.h>
+void DaoSo(int n){
+    if(n==0){
+        return ;
+    }
+    printf("%d",n%10);
+    DaoSo(n/10);
+}
+
+int main()
+{
+    int n;
+    int kq=0;
+    printf("Nhap gia tri n: ");
+    scanf("%d",&n);
+    /*while(n>0){
+        kq=kq*10+n%10;
+        n/=10;
+    }*/
+    DaoSo(n);
+}
