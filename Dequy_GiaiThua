@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int GiaiThua(int n){
+    return n>0? n*GiaiThua(n-1):1;
+}
+int main()
+{
+    int n;
+    printf("Nhap gia tri n: ");
+    scanf("%d",&n);
+    printf("%d ",GiaiThua(n));
+    return 0;
+}
