@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int Fibonaci(int n){
+    if (n == 1 || n == 2) {
+        return 1;
+    }
+    return Fibonaci(n-1)+Fibonaci(n-2);
+}
+int main()
+{
+    int n;
+    printf("Nhap gia tri n: ");
+    scanf("%d",&n);
+    printf("%d ",Fibonaci(n));
+    return 0;
+}
