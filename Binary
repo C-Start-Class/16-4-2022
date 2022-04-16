@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <math.h>
+
+void BinaryConvert(int n){
+    if(n<=0){
+        return;
+    }
+    BinaryConvert(n/2);
+    printf("%d",n%2);
+}
+
+int main()
+{
+    int n;
+    int i = 0;
+    int Binary = 0;
+    printf("Nhap gia tri n: ");
+    scanf("%d",&n);
+    /*while(n>0){
+        Binary += (n%2) * pow(10,i);
+        i++;
+        n/=2;
+    }
+    printf("%d",Binary);
+    */
+    BinaryConvert(n);
+}
