@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int inTg(int n){
+    if(n==0){
+        return 0;
+    }
+    return n+inTg(n-1);
+}
+
+int inTg2(int n){
+    return n>0?n+inTg2(n-1):n;
+}
+
+int main()
+{
+    int n;
+    printf("Nhap gia tri n: ");
+    scanf("%d",&n);
+    printf("%d",inTg2(n));
+    return 0;
+}
